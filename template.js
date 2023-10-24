@@ -81,21 +81,37 @@ console.log(gruppoNumeri);
  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let area = function (l1 , l2) {
+    return l1 * l2
+}
+
 
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "crazyDiff" che calcola la differenza assoluta tra un numero fornito e 19.
  Se il valore calcolato è più grande di 19, la funzione deve tornare tale risultato moltiplicato per 3.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let crazyDiff = function (numero) {
+    let differenza = Math.abs(numero - 19);
+    if (differenza > 19) {
+        return differenza * 3;
+    } else {
+        return differenza;
+    }
+}
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "code" all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code" allora deve ritornarla senza modifiche.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let codify = function (stringa) {
+    if (stringa.startsWith("code")) {
+        return stringa;
+    } else {
+        return "code" + stringa;
+    }
+}
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
@@ -103,10 +119,24 @@ console.log(gruppoNumeri);
  SUGGERIMENTO: operatore modulo
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let check3and7 = function (numero) {
+    if (numero <= 0) {
+        return false;
+    }
+    if (numero % 3 === 0 || numero % 7 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let cutString = function (stringa) {
+    if (stringa.length < 2) {
+        return "";
+    }
+    return stringa.substring(1, stringa.length - 1);
+}
