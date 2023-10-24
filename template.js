@@ -3,31 +3,78 @@
  La funzione deve ritornare la somma di quei due valori, ma se il loro valore è lo stesso allora deve ritornare la loro somma moltiplicata per 3.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let crazySum = function (numero1, numero2) {
+    if (numero1 === numero2) {
+        return (numero1 + numero2) * 3;
+    } else {
+        return numero1 + numero2;
+    }
+}
 
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "boundary", che accetta un numero intero come parametro e ritorna true se tale parametro è incluso tra 20 e 100 (incluso) o se è esattamente uguale a 400.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let boundary = function (numero) {
+    if ((numero >= 20 && numero <= 100) || numero === 400) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "reverseString", che accetta una stringa come parametro e la ritorna invertita (es.: EPICODE => EDOCIPE).
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let reverseString = function (stringa) {
+    let reversedString = stringa.split('').reverse().join('')
+    return reversedString;
+}
+
+let stringaEpicode = "EPICODE";
+let reversedEpicode = reverseString(stringaEpicode);
+console.log(reversedEpicode);  // Stampa "EDOCIPE"
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let upperFirst = function (stringa) {
+    let parole = stringa.split(' ');
+
+    for (let i = 0; i < parole.length; i++) {
+        let lettera = parole[i];
+        if (lettera.length > 0) {
+            parole[i] = lettera[0].toUpperCase() + lettera.slice(1).toLowerCase();
+        }
+    }
+    let fraseFinale = parole.join(' ');
+    return fraseFinale;
+}
+
+let originalString = "proviamo questa funzione";
+let modifica = upperFirst(originalString);
+console.log(modifica); 
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let giveMeRandom = function (n) {
+    let numeriACaso = []
+
+    for (let i = 0 ; i < n ; i++) {
+        let numeroRandom = Math.floor(Math.random() * 11);
+        numeriACaso.push(numeroRandom);
+    }
+    return numeriACaso;
+}
+
+let n = 5; 
+let gruppoNumeri = giveMeRandom(n);
+console.log(gruppoNumeri);
+
 
 //EXTRA:
 /* ESERCIZIO 1
